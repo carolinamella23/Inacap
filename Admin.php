@@ -20,9 +20,7 @@
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-        <link rel="stylesheet" href="Estilos/Apple.css">
-        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">  
     </head>
     <body data-offset="40" background="Fotos/Foto.jpg" style="background-attachment: fixed">
         <div class="container">
@@ -32,39 +30,88 @@
                         include("Include/Cabecera.php");
                     ?>
                 </div>
-                <!-- Menú bar para la sessión-->
-                <div class="navbar">
-                    <div class="navbar-inner">
-                        <div class="container">
-                            <div class="nav-collapse">
-                                <ul class="nav">
-                                    <li class=""><a href="Admin.php">ADMINISTRADOR DEL SITIO</a></li>
-                                </ul>
-                                <form action="#" class="navbar-search form-inline" style="margin-top:6px"> 
-                                </form>
-                                <ul class="nav pull-right">
-                                    <li><a href="">Bienvenido(a)<strong><?php echo $_SESSION['user'];?></strong> </a></li>
-                                    <li><a href="Desconectar.php"> Cerrar Sesión </a></li>
-                                </ul>
-                            </div> 
-                        </div>
-                    </div> 
-                </div>
             </header>
-              <nav>
-                 <ul class="menu">
-                      <li><a href="#">Inicio</a></li>
-                      <li><a href="#">Administración</a></li>
-                      <li><a href="#">Ventas</a></li>
-                      <li><a href="#">Factura</a></li>
-                 </ul>
-                 <div class="search_bar">
-                     <a href="#" class=""></a>
-                     <input type="text" id="bar">
-                 </div>
-           </nav>
+            <?php
+                include("Include/Menu.php");
+            ?>
+            <div id="myCarousel" class="carousel slide homCar">
+		<div class="carousel-inner" style="border-top:18px solid #222; border-bottom:1px solid #222; border-radius:4px;">
+		  <div class="item active">
+			<img src="Fotos/pascomputacion.jpg" alt="" style="min-height:250px; min-width:100%"/>
+			<div class="carousel-caption">
+				  <h4>X-men</h4>
+                                        <p>
+                                            Disfruta la mejor calidad de la serie de películas que x.men
+                                            tiene para ti.
+                                        </p>
+			</div>
+		  </div>
+		  <div class="item">
+			<img src="Fotos/pastopografia.jpg" alt="" style="min-height:250px; min-width:100%"/>
+			<div class="carousel-caption">
+				  <h4>Elenco</h4>
+                                        <p>
+                                            Conoce al elenco que esta detrás de esta espectacular saga.
+                                        </p>
+			</div>
+		  </div>
+		  <div class="item">
+			<img src="Fotos/pasalgebra.jpg" alt="" style="min-height:250px; min-width:100%"/>
+			<div class="carousel-caption">
+				  <h4>Comic</h4>
+                                        <p>
+                                           Disfruta además de todos los comic disponibles, solamente en este sitio.
+                                        </p>
+			</div>
+		  </div>
+		</div>
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
         </div>
-         
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+         <h3>ACTIVIDADES DEL ADMINISTRADOR</h3>
+         <div class="row" style="text-align:center">
+             <div class="span2">
+                 <div class="well well-small">
+                     <h4>Administración</h4>
+                     <a href="Usuarios.php"><small>Ingresar</small></a>  
+                 </div> 
+             </div>
+             <div class="span2">
+                 <div class="well well-small">
+                     <h4>Ventas</h4>
+                     <a href="Vetas.php"><small>Ingresar</small></a>
+                 </div>
+             </div>
+              <div class="span2">
+                 <div class="well well-small">
+                     <h4>Factura</h4>
+                     <a href="Factura.php"><small>Ingresar</small></a>
+                 </div>
+             </div>
+               <div class="span2">
+                 <div class="well well-small">
+                     <h4>Contacto</h4>
+                     <a href="Contacto.php"><small>Ingresar</small></a>
+                 </div>
+             </div>
+              <div class="span2">
+                 <div class="well well-small">
+                     <h4>Galería</h4>
+                     <a href="Galeria.php"><small>Ingresar</small></a>
+                 </div>
+             </div>
+              <div class="span2">
+                 <div class="well well-small">
+                     <h4>Inventario</h4>
+                     <a href="Inventario.php"><small>Ingresar</small></a>
+                 </div>
+             </div>
+         </div>
+         <center>
+             <img src="Fotos/Tiburon.gif" alt="Tiburon">
+         </center>    
+        </div>
+        <script src="bootstrap/js/jquery-1.8.3.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>
